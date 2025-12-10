@@ -27,6 +27,7 @@ cd ~/configs && ./scripts/setup.sh
 ~/configs/
 ├── alacritty/       # Terminal config
 ├── nvim/            # Neovim config (VSCode-like)
+├── tmux/            # Tmux config (Monokai Pro theme)
 ├── vscode/          # VSCode settings.json
 ├── jetbrains/       # JetBrains theme
 ├── fonts/           # JetBrains Mono, Nerd Symbols, Inter, Mozilla

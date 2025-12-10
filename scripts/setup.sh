@@ -778,6 +778,11 @@ deploy_configs() {
         cp -r "$CONFIGS_DIR/nvim/"* "$HOME/.config/nvim/"
     fi
 
+    # Tmux
+    if [[ -f "$CONFIGS_DIR/tmux/tmux.conf" ]]; then
+        cp "$CONFIGS_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+    fi
+
     # VSCode
     if [[ "$OS" == "macos" ]]; then
         VSCODE_DIR="$HOME/Library/Application Support/Code/User"
