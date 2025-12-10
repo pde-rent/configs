@@ -13,8 +13,25 @@ return {
       local builtin = require("telescope.builtin")
       local actions = require("telescope.actions")
 
+      -- Ensure rg is found
+      local rg_path = vim.fn.expand("~/.local/bin/rg")
+      if vim.fn.executable(rg_path) == 0 then
+        rg_path = "rg"  -- fallback to PATH
+      end
+
       telescope.setup({
         defaults = {
+          vimgrep_arguments = {
+            rg_path,
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+            "--glob", "!.git/*",
+          },
           prompt_prefix = "  ",
           selection_caret = " ",
           path_display = { "smart" },
@@ -57,9 +74,10 @@ return {
         pickers = {
           find_files = {
             hidden = true,
+            find_command = { vim.fn.expand("~/.local/bin/fd"), "--type", "f", "--hidden", "--exclude", ".git" },
           },
           live_grep = {
-            additional_args = { "--hidden", "--glob", "!.git/*" },
+            -- additional_args handled by vimgrep_arguments above
           },
           buffers = {
             sort_mru = true,
