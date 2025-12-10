@@ -1,0 +1,331 @@
+{
+  // ==========================================================================
+  // Theme & Appearance (Monokai Pro Classic - matching Neovim)
+  // ==========================================================================
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.productIconTheme": "icons-carbon",
+
+  // Custom color overrides to match Neovim Monokai Pro Classic
+  "workbench.colorCustomizations": {
+    // Editor background and foreground
+    "editor.background": "#272822",
+    "editor.foreground": "#fdfff1",
+    "editorCursor.foreground": "#fdfff1",
+
+    // Selection colors
+    "editor.selectionBackground": "#3b3c35",
+    "editor.selectionForeground": "#fdfff1",
+    "editor.inactiveSelectionBackground": "#3b3c3580",
+
+    // Line highlight
+    "editor.lineHighlightBackground": "#3b3c3550",
+    "editorLineNumber.foreground": "#6e7066",
+    "editorLineNumber.activeForeground": "#fdfff1",
+
+    // Sidebar
+    "sideBar.background": "#272822",
+    "sideBar.foreground": "#fdfff1",
+    "sideBarTitle.foreground": "#fdfff1",
+    "sideBarSectionHeader.background": "#3b3c35",
+
+    // Activity bar
+    "activityBar.background": "#272822",
+    "activityBar.foreground": "#fdfff1",
+    "activityBarBadge.background": "#f92672",
+
+    // Title bar
+    "titleBar.activeBackground": "#272822",
+    "titleBar.activeForeground": "#fdfff1",
+    "titleBar.inactiveBackground": "#272822",
+
+    // Tabs
+    "tab.activeBackground": "#3b3c35",
+    "tab.activeForeground": "#fdfff1",
+    "tab.inactiveBackground": "#272822",
+    "tab.inactiveForeground": "#6e7066",
+    "tab.border": "#272822",
+    "editorGroupHeader.tabsBackground": "#272822",
+
+    // Terminal
+    "terminal.background": "#272822",
+    "terminal.foreground": "#fdfff1",
+    "terminal.ansiBlack": "#3b3c35",
+    "terminal.ansiRed": "#f92672",
+    "terminal.ansiGreen": "#a6e22e",
+    "terminal.ansiYellow": "#e6db74",
+    "terminal.ansiBlue": "#fd971f",
+    "terminal.ansiMagenta": "#ae81ff",
+    "terminal.ansiCyan": "#66d9ef",
+    "terminal.ansiWhite": "#fdfff1",
+    "terminal.ansiBrightBlack": "#6e7066",
+    "terminal.ansiBrightRed": "#f92672",
+    "terminal.ansiBrightGreen": "#a6e22e",
+    "terminal.ansiBrightYellow": "#e6db74",
+    "terminal.ansiBrightBlue": "#fd971f",
+    "terminal.ansiBrightMagenta": "#ae81ff",
+    "terminal.ansiBrightCyan": "#66d9ef",
+    "terminal.ansiBrightWhite": "#fdfff1",
+
+    // Status bar
+    "statusBar.background": "#272822",
+    "statusBar.foreground": "#fdfff1",
+    "statusBar.debuggingBackground": "#f92672",
+    "statusBar.noFolderBackground": "#272822",
+
+    // Panel
+    "panel.background": "#272822",
+    "panel.border": "#3b3c35",
+    "panelTitle.activeForeground": "#fdfff1",
+
+    // Input
+    "input.background": "#3b3c35",
+    "input.foreground": "#fdfff1",
+    "input.border": "#3b3c35",
+    "inputOption.activeBorder": "#f92672",
+
+    // Dropdown
+    "dropdown.background": "#272822",
+    "dropdown.foreground": "#fdfff1",
+    "dropdown.border": "#3b3c35",
+
+    // List
+    "list.activeSelectionBackground": "#3b3c35",
+    "list.activeSelectionForeground": "#fdfff1",
+    "list.hoverBackground": "#3b3c3580",
+    "list.focusBackground": "#3b3c35",
+
+    // Git decorations
+    "gitDecoration.modifiedResourceForeground": "#e6db74",
+    "gitDecoration.untrackedResourceForeground": "#a6e22e",
+    "gitDecoration.deletedResourceForeground": "#f92672",
+    "gitDecoration.conflictingResourceForeground": "#fd971f",
+
+    // Minimap
+    "minimap.background": "#272822",
+
+    // Scrollbar
+    "scrollbarSlider.background": "#3b3c3580",
+    "scrollbarSlider.hoverBackground": "#3b3c35",
+    "scrollbarSlider.activeBackground": "#6e7066"
+  },
+
+  // Syntax highlighting to match Neovim
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": { "foreground": "#6e7066", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["string", "string.quoted"],
+        "settings": { "foreground": "#e6db74" }
+      },
+      {
+        "scope": ["constant.numeric", "constant.language"],
+        "settings": { "foreground": "#ae81ff" }
+      },
+      {
+        "scope": ["keyword", "storage.type", "storage.modifier"],
+        "settings": { "foreground": "#f92672" }
+      },
+      {
+        "scope": ["entity.name.function", "support.function"],
+        "settings": { "foreground": "#a6e22e" }
+      },
+      {
+        "scope": ["entity.name.type", "entity.name.class", "support.class"],
+        "settings": { "foreground": "#66d9ef", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["variable.parameter", "variable.other"],
+        "settings": { "foreground": "#fd971f", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["entity.name.tag"],
+        "settings": { "foreground": "#f92672" }
+      },
+      {
+        "scope": ["entity.other.attribute-name"],
+        "settings": { "foreground": "#a6e22e" }
+      }
+    ]
+  },
+
+  // ==========================================================================
+  // Editor Settings
+  // ==========================================================================
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.5,
+  "editor.letterSpacing": 0.5,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 80,
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [80, 120],
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.linkedEditing": true,
+  "editor.suggest.preview": true,
+
+  // ==========================================================================
+  // Terminal Settings
+  // ==========================================================================
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', 'JetBrains Mono', monospace",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  // ==========================================================================
+  // File Settings
+  // ==========================================================================
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/.venv": true,
+    "**/target": true,
+    "**/zig-cache": true,
+    "**/zig-out": true
+  },
+
+  // ==========================================================================
+  // Workbench Settings
+  // ==========================================================================
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.sideBar.location": "left",
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "breadcrumbs.enabled": true,
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": true,
+
+  // ==========================================================================
+  // Explorer Settings
+  // ==========================================================================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.d.ts, ${capture}.test.ts",
+    "*.tsx": "${capture}.test.tsx",
+    "package.json": "package-lock.json, yarn.lock, bun.lockb, pnpm-lock.yaml"
+  },
+
+  // ==========================================================================
+  // Git Settings
+  // ==========================================================================
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ==========================================================================
+  // Language-specific Settings
+  // ==========================================================================
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+
+  // ==========================================================================
+  // Extension Settings
+  // ==========================================================================
+  "prettier.singleQuote": false,
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "rust-analyzer.checkOnSave.command": "clippy",
+
+  "go.formatTool": "gofmt",
+  "go.lintTool": "golangci-lint",
+
+  "python.analysis.typeCheckingMode": "basic",
+
+  // Vim extension (optional - if using VSCodeVim)
+  "vim.enable": false
+}

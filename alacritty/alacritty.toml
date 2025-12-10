@@ -1,0 +1,243 @@
+# Window Management & Aesthetics
+[window]
+padding = { x = 0, y = 0 }
+dynamic_padding = true  # Centers content to avoid bottom gap
+opacity = 0.95
+
+# Monokai Pro Classic Colors
+[colors.primary]
+background = "#272822"
+foreground = "#fdfff1"
+
+[colors.normal]
+black = "#3b3c35"
+red = "#f92672"
+green = "#a6e22e"
+yellow = "#e6db74"
+blue = "#fd971f"
+magenta = "#ae81ff"
+cyan = "#66d9ef"
+white = "#fdfff1"
+
+[colors.bright]
+black = "#6e7066"
+red = "#f92672"
+green = "#a6e22e"
+yellow = "#e6db74"
+blue = "#fd971f"
+magenta = "#ae81ff"
+cyan = "#66d9ef"
+white = "#fdfff1"
+
+[colors.selection]
+background = "#3b3c35"
+text = "#fdfff1"
+
+[colors.cursor]
+cursor = "#fdfff1"
+text = "#272822"
+
+# Font Configuration
+[font]
+size = 16.0
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+# Scrolling & History
+[scrolling]
+history = 5000
+multiplier = 3
+
+# Selection & Clipboard
+[selection]
+save_to_clipboard = true
+
+# Makes Alt + Arrow Keys work in tmux
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001b[1;3D"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001b[1;3C"
+
+[[keyboard.bindings]]
+key = "Up"
+mods = "Alt"
+chars = "\u001b[1;3A"
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Alt"
+chars = "\u001b[1;3B"
+
+# Option+Shift+Arrow for word selection
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt|Shift"
+chars = "\u001b[1;4D"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt|Shift"
+chars = "\u001b[1;4C"
+
+# Mouse bindings for natural scrolling
+[[mouse.bindings]]
+mouse = 4
+action = "ScrollLineDown"
+
+[[mouse.bindings]]
+mouse = 5
+action = "ScrollLineUp"
+
+# macOS Cmd key bindings for Neovim (using CSI u encoding)
+# Cmd+A: Select all
+[[keyboard.bindings]]
+key = "A"
+mods = "Command"
+chars = "\u001b[97;9u"
+
+# Cmd+O: Open file
+[[keyboard.bindings]]
+key = "O"
+mods = "Command"
+chars = "\u001b[111;9u"
+
+# Cmd+Z: Undo
+[[keyboard.bindings]]
+key = "Z"
+mods = "Command"
+chars = "\u001b[122;9u"
+
+# Cmd+Shift+Z: Redo
+[[keyboard.bindings]]
+key = "Z"
+mods = "Command|Shift"
+chars = "\u001b[122;10u"
+
+# Cmd+Y: Redo (alternative)
+[[keyboard.bindings]]
+key = "Y"
+mods = "Command"
+chars = "\u001b[121;9u"
+
+# Cmd+X: Cut
+[[keyboard.bindings]]
+key = "X"
+mods = "Command"
+chars = "\u001b[120;9u"
+
+# Cmd+C: Copy
+[[keyboard.bindings]]
+key = "C"
+mods = "Command"
+chars = "\u001b[99;9u"
+
+# Cmd+V: Paste
+[[keyboard.bindings]]
+key = "V"
+mods = "Command"
+chars = "\u001b[118;9u"
+
+# Cmd+B: Toggle sidebar/file tree
+[[keyboard.bindings]]
+key = "B"
+mods = "Command"
+chars = "\u001b[98;9u"
+
+# Cmd+Delete: Delete file/folder in file tree
+[[keyboard.bindings]]
+key = "Back"
+mods = "Command"
+chars = "\u001b[127;9u"
+
+# F12: Go to definition (ensure it passes through)
+[[keyboard.bindings]]
+key = "F12"
+mods = "None"
+chars = "\u001b[24~"
+
+# Shift+F12: Go to references
+[[keyboard.bindings]]
+key = "F12"
+mods = "Shift"
+chars = "\u001b[24;2~"
+
+# Cmd+W: Close buffer (not terminal)
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+chars = "\u001b[119;9u"
+
+# Ctrl+T: New tab/file
+[[keyboard.bindings]]
+key = "T"
+mods = "Control"
+chars = "\u001b[116;5u"
+
+# Cmd+Shift+T: Reopen closed tab
+[[keyboard.bindings]]
+key = "T"
+mods = "Command|Shift"
+chars = "\u001b[116;10u"
+
+# Shift+Arrow keys for selection (send special sequences)
+[[keyboard.bindings]]
+key = "Left"
+mods = "Shift"
+chars = "\u001b[1;2D"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Shift"
+chars = "\u001b[1;2C"
+
+[[keyboard.bindings]]
+key = "Up"
+mods = "Shift"
+chars = "\u001b[1;2A"
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Shift"
+chars = "\u001b[1;2B"
+
+# Cmd+Shift+Arrow for selection to start/end of line
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command|Shift"
+chars = "\u001b[1;10D"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command|Shift"
+chars = "\u001b[1;10C"
+
+# Shift+Home/End for selection
+[[keyboard.bindings]]
+key = "Home"
+mods = "Shift"
+chars = "\u001b[1;2H"
+
+[[keyboard.bindings]]
+key = "End"
+mods = "Shift"
+chars = "\u001b[1;2F"
+
