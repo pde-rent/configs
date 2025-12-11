@@ -197,6 +197,12 @@ mods = "Command"
 chars = "\u001b[110;9u"
 
 # Alacritty window management (Cmd+Shift for terminal operations)
+# Cmd+Shift+T: New Alacritty window/tab
+[[keyboard.bindings]]
+key = "T"
+mods = "Command|Shift"
+action = "SpawnNewInstance"
+
 # Cmd+Shift+N: New Alacritty window
 [[keyboard.bindings]]
 key = "N"

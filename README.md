@@ -85,11 +85,12 @@ The setup patches JetBrains Mono with Nerd Font icons (requires Docker or FontFo
 ### Terminal (Alacritty)
 | Key | Action |
 |-----|--------|
+| `Cmd+Shift+T` | New window |
 | `Cmd+Shift+N` | New window |
 | `Cmd+Shift+W` | Close window |
 | `Cmd+Q` | Quit Alacritty |
 
-> **Note**: For terminal tabs, use tmux (`Ctrl+B C` for new tab, `Ctrl+B &` to close)
+> **Note**: Alacritty doesn't have native tabs. Use tmux for tab management (`Ctrl+B C` for new tab, `Ctrl+B &` to close), or use multiple windows with Cmd+Shift+T
 
 ## Supported Platforms
 
