@@ -87,3 +87,19 @@ opt.linebreak = true
 -- Disable netrw in favor of nvim-tree
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+
+-- Enable enhanced keyboard protocol (CSI u) for better key handling
+-- This allows Neovim to receive and distinguish modified keys like Cmd+C, Cmd+T, etc.
+vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
+  group = vim.api.nvim_create_augroup("KittyKeyboardProtocol", { clear = true }),
+  callback = function()
+    io.stdout:write("\x1b[>1u")  -- Enable CSI u protocol
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
+  group = vim.api.nvim_create_augroup("KittyKeyboardProtocolLeave", { clear = true }),
+  callback = function()
+    io.stdout:write("\x1b[<1u")  -- Disable CSI u protocol on exit
+  end,
+})
