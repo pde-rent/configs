@@ -65,14 +65,6 @@ The setup patches JetBrains Mono with Nerd Font icons (requires Docker or FontFo
 
 ## Keybindings
 
-### Terminal (Alacritty)
-| Key | Action |
-|-----|--------|
-| `Cmd+T` | New window |
-| `Cmd+N` | New window |
-| `Cmd+W` | Close window |
-| `Cmd+C/V/X` | Copy/Paste/Cut (terminal) |
-
 ### Neovim
 | Key | Action |
 |-----|--------|
@@ -81,14 +73,23 @@ The setup patches JetBrains Mono with Nerd Font icons (requires Docker or FontFo
 | `Cmd+B` | Toggle file tree |
 | `Cmd+Z/Shift+Z` | Undo/Redo |
 | `Cmd+C/V/X` | Copy/Paste/Cut |
-| `Ctrl+Shift+W` | Close buffer |
-| `Ctrl+Shift+T` | New buffer |
-| `Ctrl+Shift+N` | New file |
+| `Cmd+W` | Close buffer |
+| `Cmd+T` | New buffer |
+| `Cmd+N` | New file |
 | `F12` | Go to definition |
 | `Shift+F12` | References |
 | `Opt+Left/Right` | Word navigation |
 | `Del/Backspace` (visual) | Delete selection |
 | `Esc` (visual) | Cancel selection |
+
+### Terminal (Alacritty)
+| Key | Action |
+|-----|--------|
+| `Cmd+Shift+N` | New window |
+| `Cmd+Shift+W` | Close window |
+| `Cmd+Q` | Quit Alacritty |
+
+> **Note**: For terminal tabs, use tmux (`Ctrl+B C` for new tab, `Ctrl+B &` to close)
 
 ## Supported Platforms
 

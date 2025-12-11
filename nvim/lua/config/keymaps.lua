@@ -83,24 +83,24 @@ map("n", cmd_y, "<C-r>", { desc = "Redo (Cmd+Y)" })
 map("i", cmd_y, "<Esc><C-r>i", { desc = "Redo (Cmd+Y)" })
 map("v", cmd_y, "<Esc><C-r>", { desc = "Redo (Cmd+Y)" })
 
--- Buffer management (Ctrl+Shift+W/T/N to avoid conflicts with terminal Cmd keys)
--- Ctrl+Shift+W: Close buffer
-local ctrl_shift_w = vim.api.nvim_replace_termcodes("<Esc>[87;6u", true, false, true)
-map("n", ctrl_shift_w, "<cmd>bdelete<cr>", { desc = "Close buffer (Ctrl+Shift+W)" })
-map("i", ctrl_shift_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Ctrl+Shift+W)" })
-map("v", ctrl_shift_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Ctrl+Shift+W)" })
+-- Buffer management (Cmd+W/T/N via CSI u from Alacritty)
+-- Cmd+W: Close buffer
+local cmd_w = vim.api.nvim_replace_termcodes("<Esc>[119;9u", true, false, true)
+map("n", cmd_w, "<cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
+map("i", cmd_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
+map("v", cmd_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
 
--- Ctrl+Shift+T: New buffer/tab
-local ctrl_shift_t = vim.api.nvim_replace_termcodes("<Esc>[84;6u", true, false, true)
-map("n", ctrl_shift_t, "<cmd>enew<cr>", { desc = "New buffer (Ctrl+Shift+T)" })
-map("i", ctrl_shift_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Ctrl+Shift+T)" })
-map("v", ctrl_shift_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Ctrl+Shift+T)" })
+-- Cmd+T: New buffer/tab
+local cmd_t = vim.api.nvim_replace_termcodes("<Esc>[116;9u", true, false, true)
+map("n", cmd_t, "<cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
+map("i", cmd_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
+map("v", cmd_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
 
--- Ctrl+Shift+N: New file
-local ctrl_shift_n = vim.api.nvim_replace_termcodes("<Esc>[78;6u", true, false, true)
-map("n", ctrl_shift_n, "<cmd>enew<cr>", { desc = "New file (Ctrl+Shift+N)" })
-map("i", ctrl_shift_n, "<Esc><cmd>enew<cr>", { desc = "New file (Ctrl+Shift+N)" })
-map("v", ctrl_shift_n, "<Esc><cmd>enew<cr>", { desc = "New file (Ctrl+Shift+N)" })
+-- Cmd+N: New file
+local cmd_n = vim.api.nvim_replace_termcodes("<Esc>[110;9u", true, false, true)
+map("n", cmd_n, "<cmd>enew<cr>", { desc = "New file (Cmd+N)" })
+map("i", cmd_n, "<Esc><cmd>enew<cr>", { desc = "New file (Cmd+N)" })
+map("v", cmd_n, "<Esc><cmd>enew<cr>", { desc = "New file (Cmd+N)" })
 
 -- Ctrl+X: Cut
 map("v", "<C-x>", '"+d', { desc = "Cut (Ctrl+X)" })
