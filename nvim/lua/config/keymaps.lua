@@ -113,19 +113,19 @@ map("i", "<C-v>", '<C-r>+', { desc = "Paste (Ctrl+V)" })
 
 -- Cmd+X: Cut (macOS style)
 local cmd_x = vim.api.nvim_replace_termcodes("<Esc>[120;9u", true, false, true)
-map("v", cmd_x, '"+x', { desc = "Cut (Cmd+X)" })
+map("v", cmd_x, '"+d', { desc = "Cut (Cmd+X)" })  -- Cut and exit visual mode
 map("n", cmd_x, '"+dd', { desc = "Cut line (Cmd+X)" })
 
--- Cmd+C: Copy (macOS style) - use "+y to yank without cutting
+-- Cmd+C: Copy (macOS style)
 local cmd_c = vim.api.nvim_replace_termcodes("<Esc>[99;9u", true, false, true)
-map("v", cmd_c, '"+ygv', { desc = "Copy (Cmd+C)" })  -- Copy and reselect
+map("v", cmd_c, '"+y<Esc>', { desc = "Copy (Cmd+C)" })  -- Copy and exit visual mode (VSCode-like)
 map("n", cmd_c, '"+yy', { desc = "Copy line (Cmd+C)" })
 
 -- Cmd+V: Paste (macOS style)
 local cmd_v = vim.api.nvim_replace_termcodes("<Esc>[118;9u", true, false, true)
 map("n", cmd_v, '"+p', { desc = "Paste (Cmd+V)" })
 map("i", cmd_v, '<C-r>+', { desc = "Paste (Cmd+V)" })
-map("v", cmd_v, '"_d"+P', { desc = "Paste (Cmd+V)" })  -- Replace selection without yanking
+map("v", cmd_v, '"_d"+P', { desc = "Paste over selection (Cmd+V)" })  -- Replace selection without yanking
 
 -- Cmd+Left/Right: Start/End of line (VS Code style)
 map("n", "<D-Left>", "^", { desc = "Go to start of line (Cmd+Left)" })
@@ -249,3 +249,14 @@ local opt_shift_right = vim.api.nvim_replace_termcodes("<Esc>[1;4C", true, false
 map("n", opt_shift_right, "vw", { desc = "Select next word (Opt+Shift+Right)" })
 map("i", opt_shift_right, "<Esc>lvw", { desc = "Select next word (Opt+Shift+Right)" })
 map("v", opt_shift_right, "w", { desc = "Extend selection to next word" })
+
+-- ============================================================================
+-- VSCode-like Visual Mode Behavior
+-- ============================================================================
+
+-- Delete/Backspace in visual mode deletes selection (VSCode-like)
+map("v", "<Del>", "d", { desc = "Delete selection" })
+map("v", "<BS>", "d", { desc = "Delete selection" })
+
+-- Esc exits visual mode (already default, but explicit for clarity)
+map("v", "<Esc>", "<Esc>", { desc = "Cancel selection" })
