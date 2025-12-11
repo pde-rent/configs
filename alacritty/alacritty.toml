@@ -186,11 +186,17 @@ key = "W"
 mods = "Command"
 chars = "\u001b[119;9u"
 
-# Ctrl+T: New tab/file
+# Cmd+T: New tab/buffer
 [[keyboard.bindings]]
 key = "T"
-mods = "Control"
-chars = "\u001b[116;5u"
+mods = "Command"
+chars = "\u001b[116;9u"
+
+# Cmd+N: New file
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+chars = "\u001b[110;9u"
 
 # Cmd+Shift+T: Reopen closed tab
 [[keyboard.bindings]]

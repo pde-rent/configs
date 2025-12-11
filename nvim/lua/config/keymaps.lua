@@ -83,17 +83,23 @@ map("n", cmd_y, "<C-r>", { desc = "Redo (Cmd+Y)" })
 map("i", cmd_y, "<Esc><C-r>i", { desc = "Redo (Cmd+Y)" })
 map("v", cmd_y, "<Esc><C-r>", { desc = "Redo (Cmd+Y)" })
 
--- Cmd+W: Close buffer (not terminal window) - force close without saving
+-- Cmd+W: Close buffer (not terminal window)
 local cmd_w = vim.api.nvim_replace_termcodes("<Esc>[119;9u", true, false, true)
-map("n", cmd_w, "<cmd>bdelete!<cr>", { desc = "Close buffer (Cmd+W)" })
-map("i", cmd_w, "<Esc><cmd>bdelete!<cr>", { desc = "Close buffer (Cmd+W)" })
-map("v", cmd_w, "<Esc><cmd>bdelete!<cr>", { desc = "Close buffer (Cmd+W)" })
+map("n", cmd_w, "<cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
+map("i", cmd_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
+map("v", cmd_w, "<Esc><cmd>bdelete<cr>", { desc = "Close buffer (Cmd+W)" })
 
--- Ctrl+T: New file/tab
-local ctrl_t = vim.api.nvim_replace_termcodes("<Esc>[116;5u", true, false, true)
-map("n", ctrl_t, "<cmd>enew<cr>", { desc = "New file (Ctrl+T)" })
-map("i", ctrl_t, "<Esc><cmd>enew<cr>", { desc = "New file (Ctrl+T)" })
-map("v", ctrl_t, "<Esc><cmd>enew<cr>", { desc = "New file (Ctrl+T)" })
+-- Cmd+T: New buffer/tab
+local cmd_t = vim.api.nvim_replace_termcodes("<Esc>[116;9u", true, false, true)
+map("n", cmd_t, "<cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
+map("i", cmd_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
+map("v", cmd_t, "<Esc><cmd>enew<cr>", { desc = "New buffer (Cmd+T)" })
+
+-- Cmd+N: New file
+local cmd_n = vim.api.nvim_replace_termcodes("<Esc>[110;9u", true, false, true)
+map("n", cmd_n, "<cmd>enew<cr>", { desc = "New file (Cmd+N)" })
+map("i", cmd_n, "<Esc><cmd>enew<cr>", { desc = "New file (Cmd+N)" })
+map("v", cmd_n, "<Esc><cmd>enew<cr>", { desc = "New file (Cmd+N)" })
 
 -- Cmd+Shift+T: Reopen closed buffer (using buffer history)
 local cmd_shift_t = vim.api.nvim_replace_termcodes("<Esc>[116;10u", true, false, true)
