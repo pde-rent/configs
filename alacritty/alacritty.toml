@@ -180,29 +180,42 @@ key = "F12"
 mods = "Shift"
 chars = "\u001b[24;2~"
 
-# Cmd+W: Close buffer (not terminal)
+# Cmd+W: Close window/tab
 [[keyboard.bindings]]
 key = "W"
 mods = "Command"
-chars = "\u001b[119;9u"
+action = "Quit"
 
-# Cmd+T: New tab/buffer
+# Cmd+T: New window (Alacritty doesn't have tabs, use tmux for tabs)
 [[keyboard.bindings]]
 key = "T"
 mods = "Command"
-chars = "\u001b[116;9u"
+action = "SpawnNewInstance"
 
-# Cmd+N: New file
+# Cmd+N: New window
 [[keyboard.bindings]]
 key = "N"
 mods = "Command"
-chars = "\u001b[110;9u"
+action = "SpawnNewInstance"
 
-# Cmd+Shift+T: Reopen closed tab
+# Neovim buffer management (Ctrl-based, won't conflict with terminal)
+# Ctrl+W is used for window commands in vim, so use Ctrl+Shift+W for close
+[[keyboard.bindings]]
+key = "W"
+mods = "Control|Shift"
+chars = "\u001b[87;6u"
+
+# Ctrl+Shift+T: New buffer in Neovim
 [[keyboard.bindings]]
 key = "T"
-mods = "Command|Shift"
-chars = "\u001b[116;10u"
+mods = "Control|Shift"
+chars = "\u001b[84;6u"
+
+# Ctrl+Shift+N: New file in Neovim
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+chars = "\u001b[78;6u"
 
 # Shift+Arrow keys for selection (send special sequences)
 [[keyboard.bindings]]
