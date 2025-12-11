@@ -42,19 +42,19 @@ text = "#272822"
 size = 16.0
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold Italic"
 
 # Scrolling & History
@@ -138,23 +138,8 @@ key = "Y"
 mods = "Command"
 chars = "\u001b[121;9u"
 
-# Cmd+X: Cut
-[[keyboard.bindings]]
-key = "X"
-mods = "Command"
-chars = "\u001b[120;9u"
-
-# Cmd+C: Copy
-[[keyboard.bindings]]
-key = "C"
-mods = "Command"
-chars = "\u001b[99;9u"
-
-# Cmd+V: Paste
-[[keyboard.bindings]]
-key = "V"
-mods = "Command"
-chars = "\u001b[118;9u"
+# Cmd+C/V/X: Let Alacritty handle natively (system clipboard)
+# Neovim uses clipboard = "unnamedplus" for system clipboard integration
 
 # Cmd+B: Toggle sidebar/file tree
 [[keyboard.bindings]]
